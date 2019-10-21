@@ -1,7 +1,8 @@
 
 
 const INITIAL_VALUES = {
-  title: null
+  title: null,
+  text: null,
 }
 
 export const rootReducers = (state = INITIAL_VALUES, action) => {
@@ -9,5 +10,11 @@ export const rootReducers = (state = INITIAL_VALUES, action) => {
     ...state,
     title: action.payload
   })
+
+  if (action.type === 'ACTION_TEXT') return ({
+    ...state,
+    text: action.payload
+  })
+
   return state
 }

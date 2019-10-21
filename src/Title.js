@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { changeTitle } from './actions'
 
 const Title = props => {
-  console.log(props)
+  console.log('===props_TITLE', props)
   const { title, changeTitle } = props
   if (!title)
     changeTitle('Default Title')

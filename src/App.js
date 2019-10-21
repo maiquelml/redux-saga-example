@@ -7,6 +7,7 @@ import { rootReducers } from './rootReducers'
 import rootSaga from './saga'
 
 import Title from './Title'
+import Text from './Text'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -22,6 +23,7 @@ sagaMiddleware.run(rootSaga)
 const App = () => (
   <Provider store={store}>
     <Title />
+    <Text />
   </Provider>
 )
 
